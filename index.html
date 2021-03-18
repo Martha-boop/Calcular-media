@@ -7,7 +7,7 @@
     <title>Calculando a média.</title>
 </head>
 <body>
-    Digite a nota <input type="number" name="txtn" id="txtn">
+    Digite a nota  <input type="number" name="txtn" id="txtn">
     <input type="button" value="calcular" onclick="clicar()">
     <div id="res">
 
@@ -17,7 +17,12 @@
             var txtn = window.document.querySelector('input#txtn')
             var res = window.document.querySelector('div#res')
             var nt = Number(txtn.value)
-            res.innerHTML = 'Sua nota´é! '
+            res.innerHTML = `<p>Sua nota é ${nt}!</p>`
+            if( nt >= '7.0') {
+                res.innerHTML = '<p>Você está aprovado!'
+            } else {
+                res . innerHTML = '<p>Você está reprovado!'
+            }
         }
     </script>
     
